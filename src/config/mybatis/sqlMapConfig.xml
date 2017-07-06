@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	
+    <typeAliases>
+        <!--아래패키지의 Type을 Alias(별칭)으로 하겠다  -->
+        <typeAlias type="com.ic.sawon.vo.SawonVo" 
+                   alias="sawon"/>
+            
+    </typeAliases>
+    
+	<environments default="">
+		<environment id="">
+			<transactionManager type="JDBC" />
+			<dataSource type="JNDI">
+				<property name="data_source" 
+				value="java:comp/env/jdbc/oracle_test2" />
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<mappers>
+		<mapper resource="config/mybatis/mapper/sawon.xml" />
+		<mapper resource="config/mybatis/mapper/gogek.xml" />
+		<mapper resource="config/mybatis/mapper/dept.xml" />
+	</mappers>
+	
+</configuration>
+
+
+
